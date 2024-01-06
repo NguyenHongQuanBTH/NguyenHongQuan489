@@ -1,0 +1,38 @@
+ @model NguyenHongQuan489.Models.Person
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="w3-row w3-teal" style="font-size: 20px;">
+    <h2 class="w3-center w3-text">Xoá bản ghi</h2>
+</div>
+<div>
+<hr/>
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.MaNV)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.MaNV)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.TenNV)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.TenNV)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Address)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Address)
+    </dd>
+    
+
+</dl>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="MaNV"> 
+    <input type="submit" value="Delete" class="btn btn-danger">
+    
+</form>
+<a asp-action="Index"><input type="submit" value="Back" class="btn btn-primary"></a>
+</div> 

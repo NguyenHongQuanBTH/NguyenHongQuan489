@@ -1,0 +1,45 @@
+ @model IEnumerable<NguyenHongQuan489.Models.Person>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="w3-container">
+    <div class="w3-row w3-teal">
+        <h2 class="w3-center w3-text" style="font-size: 40px;">Dữ liệu</h2>
+    </div>
+</div>
+<a asp-action="Create"><input type="submit" value="Them bang moi" class="btn btn-primary" style="margin-top: 20px;"></a>
+<hr/>
+<table class="table">
+<thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenNV)
+        </th>
+         <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+         
+        <th></th>
+
+    </tr>
+</thead>
+<tbody>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNV)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id = "@item.MaNV" class="w3-button w3-teal">Edit</a>
+               
+                <a asp-action="Delete" asp-route-id = "@item.MaNV" class="w3-button w3-teal">Delete</a>
+            </td>
+        </tr>
+    }
+</tbody>
+</table> 
