@@ -7,6 +7,7 @@ namespace NguyenHongQuan489.Data
     public ApplicationDbcontext(DbContextOptions<ApplicationDbcontext> options) : base(options)
     {}
     public DbSet<Person> Person { get; set; }
+     public DbSet<Student> Student { get; set; }
 
     }
 } 
